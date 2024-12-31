@@ -3,11 +3,11 @@ import type {
   NextAuthConfig,
   Session as NextAuthSession,
 } from "next-auth";
-import { skipCSRFCheck } from "@auth/core";
 import { DrizzleAdapter } from "@auth/drizzle-adapter";
+import Github from "next-auth/providers/github";
+
 import { db } from "@hack-finder/db/client";
 import { Account, Session, User } from "@hack-finder/db/schema";
-import Discord from "next-auth/providers/discord";
 
 import { env } from "../env";
 
@@ -25,10 +25,12 @@ const adapter = DrizzleAdapter(db, {
   sessionsTable: Session,
 });
 
+export const isSecureContext = process.env.NODE_ENV === "production";
+
 export const authConfig = {
   adapter,
   secret: env.AUTH_SECRET,
-  providers: [Discord],
+  providers: [Github],
   callbacks: {
     session: (opts) => {
       if (!("user" in opts))

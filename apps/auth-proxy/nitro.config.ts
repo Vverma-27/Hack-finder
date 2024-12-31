@@ -2,7 +2,7 @@ import { defineNitroConfig } from "nitropack/config";
 
 export default defineNitroConfig({
   output: {
-    dir: ".nitro", // or ".nitro", if preferred
+    dir: ".output", // or ".nitro", if preferred
   },
   runtimeConfig: {
     // Runtime environment variables

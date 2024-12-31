@@ -1,15 +1,15 @@
 {
     "version": 2,
-    "functions": {
-        "routes/r.ts": {
-            "runtime": "edge",
-            "maxDuration": 10
+    "builds": [
+        {
+            "src": ".output/server/index.mjs",
+            "use": "@vercel/node"
         }
-    },
+    ],
     "routes": [
         {
             "src": "/r(.*)",
-            "dest": "routes/r.ts"
+            "dest": ".output/server/index.mjs"
         }
     ]
 }
