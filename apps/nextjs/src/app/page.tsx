@@ -1,7 +1,7 @@
 import { HydrateClient } from "~/trpc/server";
 import { AuthShowcase } from "./_components/auth-showcase";
 
-export const runtime = "edge";
+// export const runtime = "edge";
 
 export default function HomePage() {
   return (
@@ -18,3 +18,9 @@ export default function HomePage() {
     </HydrateClient>
   );
 }
+
+/*I am using the t3 turborepo stack. I have cloned the the create-t3-turbo repo. I am able to run it in dev if i remove edge runtime but if i run it with edge runtime then i receive the following error: 
+Internal error: TypeError: Cannot read properties of undefined (reading 'default')
+    at resolveClientReference .......
+i have read the same issues on the github page of create-t3-turbo as well but none of the solutions work for me.
+I am running windows 11*/

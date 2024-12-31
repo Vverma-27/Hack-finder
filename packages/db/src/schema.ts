@@ -18,6 +18,7 @@ export const User = pgTable("user", {
   email: text("email").unique(),
   emailVerified: timestamp("emailVerified", { mode: "date" }),
   image: text("image"),
+  username: text("username"),
 });
 
 export const UserRelations = relations(User, ({ many }) => ({
