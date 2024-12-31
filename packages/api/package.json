@@ -1,5 +1,5 @@
 {
-  "name": "@acme/api",
+  "name": "@hack-finder/api",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -19,20 +19,20 @@
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
-    "@acme/auth": "workspace:*",
-    "@acme/db": "workspace:*",
-    "@acme/validators": "workspace:*",
+    "@hack-finder/auth": "workspace:*",
+    "@hack-finder/db": "workspace:*",
+    "@hack-finder/validators": "workspace:*",
     "@trpc/server": "catalog:",
     "superjson": "2.2.1",
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@acme/eslint-config": "workspace:*",
-    "@acme/prettier-config": "workspace:*",
-    "@acme/tsconfig": "workspace:*",
+    "@hack-finder/eslint-config": "workspace:*",
+    "@hack-finder/prettier-config": "workspace:*",
+    "@hack-finder/tsconfig": "workspace:*",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:"
   },
-  "prettier": "@acme/prettier-config"
+  "prettier": "@hack-finder/prettier-config"
 }

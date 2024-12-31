@@ -1,9 +1,9 @@
 "use client";
 
-import type { RouterOutputs } from "@acme/api";
-import { CreatePostSchema } from "@acme/db/schema";
-import { cn } from "@acme/ui";
-import { Button } from "@acme/ui/button";
+import type { RouterOutputs } from "@hack-finder/api";
+import { CreatePostSchema } from "@hack-finder/db/schema";
+import { cn } from "@hack-finder/ui";
+import { Button } from "@hack-finder/ui/button";
 import {
   Form,
   FormControl,
@@ -11,9 +11,9 @@ import {
   FormItem,
   FormMessage,
   useForm,
-} from "@acme/ui/form";
-import { Input } from "@acme/ui/input";
-import { toast } from "@acme/ui/toast";
+} from "@hack-finder/ui/form";
+import { Input } from "@hack-finder/ui/input";
+import { toast } from "@hack-finder/ui/toast";
 
 import { api } from "~/trpc/react";
 

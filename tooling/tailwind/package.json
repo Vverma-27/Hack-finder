@@ -1,5 +1,5 @@
 {
-  "name": "@acme/tailwind-config",
+  "name": "@hack-finder/tailwind-config",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -20,12 +20,12 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@acme/eslint-config": "workspace:*",
-    "@acme/prettier-config": "workspace:*",
-    "@acme/tsconfig": "workspace:*",
+    "@hack-finder/eslint-config": "workspace:*",
+    "@hack-finder/prettier-config": "workspace:*",
+    "@hack-finder/tsconfig": "workspace:*",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:"
   },
-  "prettier": "@acme/prettier-config"
+  "prettier": "@hack-finder/prettier-config"
 }

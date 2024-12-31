@@ -5,10 +5,9 @@ import type {
 } from "next-auth";
 import { skipCSRFCheck } from "@auth/core";
 import { DrizzleAdapter } from "@auth/drizzle-adapter";
+import { db } from "@hack-finder/db/client";
+import { Account, Session, User } from "@hack-finder/db/schema";
 import Discord from "next-auth/providers/discord";
-
-import { db } from "@acme/db/client";
-import { Account, Session, User } from "@acme/db/schema";
 
 import { env } from "../env";
 
@@ -26,17 +25,8 @@ const adapter = DrizzleAdapter(db, {
   sessionsTable: Session,
 });
 
-export const isSecureContext = env.NODE_ENV !== "development";
-
 export const authConfig = {
   adapter,
-  // In development, we need to skip checks to allow Expo to work
-  ...(!isSecureContext
-    ? {
-        skipCSRFCheck: skipCSRFCheck,
-        trustHost: true,
-      }
-    : {}),
   secret: env.AUTH_SECRET,
   providers: [Discord],
   callbacks: {

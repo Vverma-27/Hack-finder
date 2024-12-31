@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "functions": {
+        "routes/r.ts": {
+            "runtime": "edge",
+            "maxDuration": 10
+        }
+    },
+    "routes": [
+        {
+            "src": "/r(.*)",
+            "dest": "routes/r.ts"
+        }
+    ]
+}
